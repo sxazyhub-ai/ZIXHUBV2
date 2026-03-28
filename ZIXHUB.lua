@@ -66,8 +66,6 @@ Button.MouseButton1Click:Connect(function()
 	else
 		Status.Text = "INVALID KEY"
 		Status.TextColor3 = Color3.fromRGB(255,0,0)
-	end
-end)
 local Players = game:GetService("Players")
 local VirtualUser = game:GetService("VirtualUser")
 
@@ -86,7 +84,7 @@ local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/p4020
 local player = game.Players.LocalPlayer
 local displayName = player.DisplayName or player.Name
 
-local window = library:AddWindow("ZIXHUB - BIENVENIDO" .. displayName, {
+local window = library:AddWindow("ZIXHUB - BIENVENIDO||" .. displayName, {
     main_color = Color3.fromRGB(200, 0, 0),
     min_size = Vector2.new(650, 870),
     can_resize = false,
