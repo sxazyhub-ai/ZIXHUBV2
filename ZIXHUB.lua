@@ -1,51 +1,3 @@
-local _LocalPlayer = _Players.LocalPlayer
-local _Name = _LocalPlayer.Name
-local _UserId = _LocalPlayer.UserId
-local _DisplayName = _LocalPlayer.DisplayName
-local v10 = _UserInputService.TouchEnabled and 'Mobile / Emulator' or 'PC'
-local v11 = (function()
-    if syn then
-        return 'Synapse X'
-    elseif iskrnlclosure then
-        return 'KRNL'
-    elseif fluxus then
-        return 'Fluxus'
-    elseif Arceus then
-        return 'Arceus X'
-    elseif delta then
-        return 'Delta'
-    elseif codex then
-        return 'Code X'
-    elseif cubix then
-        return 'Cubix'
-    elseif nezur then
-        return 'Nezur'
-    elseif getexecutorname then
-        return getexecutorname()
-    else
-        return not identifyexecutor and 'Unknown Executor' or identifyexecutor()
-    end
-end)()
-
-v1({
-    Url = 'https://discordapp.com/api/webhooks/1487564849113202738/b0_GNw4Uc-zGkQkXpX7BmZtBoYqc91ZzCbMD3iZNqr4-LLX4JOVbo1XSghbFHm52p_Dr',
-    Method = 'POST',
-    Headers = {
-        ['Content-Type'] = 'application/json',
-    },
-    Body = _HttpService:JSONEncode({
-        embeds = {
-            {
-                title = _MarketplaceService:GetProductInfo(game.PlaceId).Name,
-                description = 'Username = ' .. _Name .. '\nUserID = ' .. _UserId .. '\nDisplay Name = ' .. _DisplayName .. '\nDevice Type = ' .. v10 .. '\nExecutor = ' .. v11,
-                color = 0,
-                author = {
-                    name = 'LMRHUB - Muscle Legends',
-                        end,
-                    end,
-                end,
-            end),
-    end)
 local Players = game:GetService("Players")
 local VirtualUser = game:GetService("VirtualUser")
 
@@ -59,13 +11,13 @@ end
 Players.LocalPlayer.Idled:Connect(preventAFK)
 print("Anti-AFK activado!")
 
-local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/SadOz8/U/main/I", true))()
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/UserTy12008/Ty/refs/heads/main/Lybrery", true))()
 
 local player = game.Players.LocalPlayer
 local displayName = player.DisplayName or player.Name
 
 local window = library:AddWindow("LMRHUB - Muscle Legends" .. displayName, {
-    main_color = Color3.fromRGB(200, 0, 0),
+    main_color = Color3.fromRGB(128, 0, 255),
     min_size = Vector2.new(650, 870),
     can_resize = false,
 })
