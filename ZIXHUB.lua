@@ -11,7 +11,7 @@ end
 Players.LocalPlayer.Idled:Connect(preventAFK)
 print("Anti-AFK activado!")
 
-local library = loadstring(game:HttpGet('https://raw.githubusercontent.com/memejames/elerium-v2-ui-library/main/Library", true))()
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/sn-lider/SN-LIBRARY-OP/refs/heads/main/main.lua", true))()
 
 local player = game.Players.LocalPlayer
 local displayName = player.DisplayName or player.Name
