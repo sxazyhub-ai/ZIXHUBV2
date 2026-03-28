@@ -21,7 +21,6 @@ local window = library:AddWindow("LMRHUB - Muscle Legends" .. displayName, {
     main_color = Color3.fromRGB(139, 0, 0),
     secondary = Color3.fromRGB(60, 0, 0),
     text = Color3.fromRGB(255, 255, 255),
-    accent = Coler.fromRGB(0,255, 150),
     min_size = Vector2.new(650, 870),
     can_resize = false,
 })
