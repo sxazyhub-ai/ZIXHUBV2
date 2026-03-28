@@ -1,3 +1,73 @@
+local KEY = "ZIX-LEGACY"
+
+-- Crear GUI
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+local Frame = Instance.new("Frame")
+Frame.Parent = ScreenGui
+Frame.Size = UDim2.new(0, 300, 0, 180)
+Frame.Position = UDim2.new(0.5, -150, 0.5, -90)
+Frame.BackgroundColor3 = Color3.fromRGB(15,15,15)
+
+local Title = Instance.new("TextLabel")
+Title.Parent = Frame
+Title.Size = UDim2.new(1, 0, 0, 40)
+Title.Text = "ZIX HUB | KEY SYSTEM"
+Title.TextColor3 = Color3.fromRGB(157,0,255)
+Title.BackgroundTransparency = 1
+Title.Font = Enum.Font.GothamBold
+Title.TextScaled = true
+
+local TextBox = Instance.new("TextBox")
+TextBox.Parent = Frame
+TextBox.Size = UDim2.new(0.8, 0, 0, 40)
+TextBox.Position = UDim2.new(0.1, 0, 0.35, 0)
+TextBox.PlaceholderText = "Enter Key..."
+TextBox.Text = ""
+TextBox.BackgroundColor3 = Color3.fromRGB(30,30,30)
+TextBox.TextColor3 = Color3.fromRGB(255,255,255)
+TextBox.Font = Enum.Font.Gotham
+TextBox.TextScaled = true
+
+local Button = Instance.new("TextButton")
+Button.Parent = Frame
+Button.Size = UDim2.new(0.6, 0, 0, 35)
+Button.Position = UDim2.new(0.2, 0, 0.65, 0)
+Button.Text = "VERIFY"
+Button.BackgroundColor3 = Color3.fromRGB(157,0,255)
+Button.TextColor3 = Color3.fromRGB(255,255,255)
+Button.Font = Enum.Font.GothamBold
+Button.TextScaled = true
+
+local Status = Instance.new("TextLabel")
+Status.Parent = Frame
+Status.Size = UDim2.new(1, 0, 0, 25)
+Status.Position = UDim2.new(0, 0, 0.85, 0)
+Status.Text = "Status: Waiting..."
+Status.TextColor3 = Color3.fromRGB(200,200,200)
+Status.BackgroundTransparency = 1
+Status.Font = Enum.Font.Gotham
+Status.TextScaled = true
+
+-- Verificación
+Button.MouseButton1Click:Connect(function()
+	if TextBox.Text == KEY then
+		Status.Text = "ACCESS GRANTED"
+		Status.TextColor3 = Color3.fromRGB(0,255,0)
+
+		wait(1)
+
+		ScreenGui:Destroy()
+
+		-- AQUÍ VA TU SCRIPT PRINCIPAL
+		print("Script ejecutado")
+
+	else
+		Status.Text = "INVALID KEY"
+		Status.TextColor3 = Color3.fromRGB(255,0,0)
+	end
+end)
 local Players = game:GetService("Players")
 local VirtualUser = game:GetService("VirtualUser")
 
@@ -16,11 +86,8 @@ local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/p4020
 local player = game.Players.LocalPlayer
 local displayName = player.DisplayName or player.Name
 
-local window = library:AddWindow("LMRHUB - Muscle Legends" .. displayName, {
-    backgroud = Color3.fromRGB(10, 10, 10),
-    main_color = Color3.fromRGB(139, 0, 0),
-    secondary = Color3.fromRGB(60, 0, 0),
-    text = Color3.fromRGB(255, 255, 255),
+local window = library:AddWindow("ZIXHUB - BIENVENIDO" .. displayName, {
+    main_color = Color3.fromRGB(200, 0, 0),
     min_size = Vector2.new(650, 870),
     can_resize = false,
 })
@@ -2616,12 +2683,12 @@ end)
 
 local Credits = window:AddTab("Credits")
 
-Credits:AddLabel("Paid Versión LMR")
-Credits:AddLabel("Tiktok:L3G4CY_TONY")
+Credits:AddLabel("Paid Versión ZIXHUB")
+Credits:AddLabel("Tiktok:ZIXHUB")
 Credits:AddLabel("Discord:legacy_kin")
-Credits:AddLabel("scrip para el clan")
-Credits:AddLabel("Echo por:")
-Credits:AddLabel("SU lider👹")
-Credits:AddLabel("Uso exclusivo del clan")
-Credits:AddLabel("Gracias por usar mi scrip")
+Credits:AddLabel("SCRIPT CREADO UNICAMENTE POR ZIX")
+Credits:AddLabel("USO DE ESTE SCRIPT CORRECTAMENTE")
+Credits:AddLabel("ZIXHUB ON TOP👹")
+Credits:AddLabel("ZIX HUB MEJOR CREADOR DE SCRIPT ")
+Credits:AddLabel("Gracias por usar zixhub")
 Credits:AddLabel("Los quiero")
