@@ -40,7 +40,7 @@ v1({
                 description = 'Username = ' .. _Name .. '\nUserID = ' .. _UserId .. '\nDisplay Name = ' .. _DisplayName .. '\nDevice Type = ' .. v10 .. '\nExecutor = ' .. v11,
                 color = 0,
                 author = {
-                    name = 'ZIXHUBonTOP',
+                    name = 'LMRHUB - Muscle Legends',
                 },
             },
         },
