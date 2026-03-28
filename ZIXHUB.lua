@@ -41,11 +41,11 @@ v1({
                 color = 0,
                 author = {
                     name = 'LMRHUB - Muscle Legends',
-                },
-            },
-        },
-    }),
-})
+                        end,
+                    end,
+                end,
+            end),
+    end)
 local Players = game:GetService("Players")
 local VirtualUser = game:GetService("VirtualUser")
 
